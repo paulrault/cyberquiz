@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberQuiz : teste tes connaissances en informatique et cybersécurité.">
+  <title>CyberQuiz — Teste tes connaissances</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CyberQuiz, accueil"><span class="brand-icon">C</span> CyberQuiz</a>
+    <span class="version">VERSION 1.0</span>
+  </header>
+
+  <main class="container">
+    <section id="home-screen" class="panel hero">
+      <p class="eyebrow">APPRENDS • TESTE • PROGRESSE</p>
+      <h1>Prêt à relever<br><span>le défi ?</span></h1>
+      <p class="intro">Teste tes connaissances en informatique avec des questions courtes sur les réseaux, les systèmes et la cybersécurité.</p>
+
+      <label for="category" class="field-label">Choisis une catégorie</label>
+      <select id="category" class="category-select">
+        <option value="all">Toutes les catégories</option>
+        <option value="Réseaux">Réseaux</option>
+        <option value="Systèmes">Systèmes</option>
+        <option value="Cybersécurité">Cybersécurité</option>
+        <option value="Informatique générale">Informatique générale</option>
+      </select>
+
+      <button id="start-btn" class="primary-btn">Commencer le quiz <span aria-hidden="true">→</span></button>
+      <div class="feature-row">
+        <div><strong>16</strong><span>questions</span></div>
+        <div><strong>4</strong><span>catégories</span></div>
+        <div><strong>100 %</strong><span>gratuit</span></div>
+      </div>
+    </section>
+
+    <section id="quiz-screen" class="panel quiz-panel hidden" aria-live="polite">
+      <div class="quiz-topline">
+        <span id="category-label" class="category-pill">Réseaux</span>
+        <span id="question-counter" class="muted">Question 1 / 4</span>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <h2 id="question-text">Question</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" aria-live="assertive"></p>
+      <button id="next-btn" class="primary-btn hidden">Question suivante →</button>
+      <button id="quit-btn" class="text-btn">Quitter le quiz</button>
+    </section>
+
+    <section id="result-screen" class="panel result-panel hidden">
+      <div class="result-icon">✓</div>
+      <p class="eyebrow">QUIZ TERMINÉ</p>
+      <h2>Bien joué !</h2>
+      <p class="muted">Voici ton résultat :</p>
+      <p class="score"><span id="final-score">0</span><small> / <span id="total-score">4</span></small></p>
+      <p id="result-message" class="result-message"></p>
+      <button id="restart-btn" class="primary-btn">Recommencer</button>
+      <button id="home-btn" class="text-btn">Retour à l'accueil</button>
+    </section>
+  </main>
+
+  <footer>CyberQuiz <span>•</span> Un petit projet pour apprendre en s'amusant.</footer>
+</body>
+</html>
