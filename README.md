@@ -1,22 +1,24 @@
-# CyberQuiz
+# CyberQuiz — Version 2.0
 
-Petit quiz interactif en français sur les réseaux, les systèmes, la cybersécurité et l'informatique générale.
+Quiz interactif en français sur les réseaux, les systèmes, la cybersécurité et l'informatique générale.
+
+## Nouveautés
+- 32 questions au total (8 par catégorie).
+- Questions mélangées à chaque nouvelle partie.
+- Choix d'une catégorie ou mode toutes catégories.
+- Correction immédiate avec explication.
+- Score final et possibilité de recommencer.
 
 ## Fichiers
-- `index.html` : structure de la page
+- `index.html` : structure
 - `style.css` : design bleu nuit et bleu clair
-- `script.js` : questions, réponses, score et navigation
+- `script.js` : questions et fonctionnement
 
 ## Lancer en local
-Ouvrir `index.html` dans un navigateur. Aucun serveur ni dépendance n'est nécessaire.
+Ouvrir `index.html` dans un navigateur. Aucune dépendance n'est nécessaire.
 
-## Publier avec GitHub Pages
-1. Créer un dépôt GitHub nommé `cyberquiz` (ou un autre nom).
-2. Ajouter les trois fichiers `index.html`, `style.css` et `script.js` à la racine du dépôt.
-3. Ouvrir **Settings > Pages**.
-4. Dans **Build and deployment**, choisir **Deploy from a branch**.
-5. Choisir la branche `main` et le dossier `/ (root)`, puis enregistrer.
-6. Attendre la publication : l'adresse sera du type `https://TON-PSEUDO.github.io/cyberquiz/`.
+## Mettre à jour GitHub Pages
+Remplacer les fichiers du dépôt par ceux de cette version, en conservant les trois fichiers à la racine. GitHub Pages republiera le site automatiquement.
 
-## Personnaliser
-Les questions sont dans le tableau `questions` au début de `script.js`. Chaque question contient une catégorie, un énoncé, quatre réponses, l'index de la bonne réponse (en commençant à 0) et une explication.
+## Ajouter une question
+Ajouter un objet dans le tableau `questions` au début de `script.js`. Les catégories disponibles sont `Réseaux`, `Systèmes`, `Cybersécurité` et `Informatique générale`. `correct` correspond à l'index de la bonne réponse (de 0 à 3).
